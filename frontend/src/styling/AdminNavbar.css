@@ -1,0 +1,101 @@
+.admin-navbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.admin-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-name {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.admin-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.tooltip-container {
+    position: relative;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.tooltip-container:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.tooltip-container.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.tooltip-container:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.logout-btn {
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.logout-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .admin-navbar {
+        padding: 1rem;
+    }
+    
+    .admin-nav-links {
+        gap: 1rem;
+    }
+    
+    .logo-name {
+        font-size: 1.5rem;
+    }
+} 

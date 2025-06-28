@@ -1,0 +1,449 @@
+.hp-body {
+    z-index: 1000;
+    background: linear-gradient(to top, #24243e, #302b63, #0f0c29);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    /* 👈 this ensures the background covers full viewport */
+}
+
+.dashboard-container {
+    margin: 2rem 1rem;
+    background-color: #cdcbde;
+    border-radius: 20px;
+    z-index: 100;
+    color: whitesmoke;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-header {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: #007bff;
+}
+
+.container-header h1 {
+    margin: 0 1rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+}
+
+.stat-boxes-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.stat-box {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    width: 22%;
+    min-width: 150px;
+    height: 11rem;
+    border-radius: 30px;
+    color: white;
+    flex: 1;
+}
+
+.stat-box h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin: 0.4rem 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.todays-attendance-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    color: black;
+}
+
+.todays-attendance-container h2 {
+    letter-spacing: 2px;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    text-align: center;
+}
+
+.mark-attendance-btn {
+    width: 100%;
+    max-width: 300px;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #26a744;
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mark-attendance-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(50, 50, 93, 0.35) 0px 15px 30px -5px, rgba(0, 0, 0, 0.4) 0px 10px 20px -8px;
+}
+
+.disabled-attendance-btn {
+    width: 100%;
+    max-width: 300px;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    background-color: gray;
+    color: #cddff1;
+    font-size: 1rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    z-index: -100;
+}
+
+.activity-log {
+    padding: 1.5rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    margin: 1rem;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.activity-log p {
+    margin: 0.8rem 0;
+    padding: 0.75rem 1rem;
+    background-color: #ffffff;
+    border-left: 4px solid #007bff;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.activity-log p:hover {
+    background-color: #e6f0ff;
+    cursor: default;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px 16px;
+    text-align: center;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.row-absent {
+    background-color: #ffebee;
+}
+
+.row-present {
+    background-color: #e8f5e8;
+}
+
+.row-leave {
+    background-color: #fff3e0;
+}
+
+.row-absent:hover,
+.row-present:hover,
+.row-leave:hover {
+    background-color: #f5f5f5;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 2rem;
+    border: 4px solid #007bff;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.profile-info h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .dashboard-container {
+        margin: 1rem 0.5rem;
+        border-radius: 15px;
+    }
+
+    .container-header {
+        padding: 0.75rem 0;
+    }
+
+    .stat-boxes-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .stat-box {
+        width: 100%;
+        max-width: 300px;
+        height: 8rem;
+        margin: 0.5rem 0;
+    }
+
+    .todays-attendance-container {
+        padding: 1.5rem 0.5rem;
+        gap: 1.5rem;
+    }
+
+    .mark-attendance-btn,
+    .disabled-attendance-btn {
+        width: 100%;
+        max-width: 250px;
+        height: 2.5rem;
+        font-size: 0.9rem;
+    }
+
+    .activity-log {
+        margin: 1rem 0.5rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .activity-log p {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .profile-container {
+        margin: 1rem 0.5rem;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-container {
+        margin: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .container-header h1 {
+        font-size: 1.25rem;
+        margin: 0 0.5rem;
+    }
+
+    .stat-box {
+        height: 6rem;
+        border-radius: 20px;
+    }
+
+    .stat-box h2 {
+        font-size: 1.25rem;
+    }
+
+    .todays-attendance-container h2 {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .mark-attendance-btn,
+    .disabled-attendance-btn {
+        height: 2.25rem;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+    }
+
+    .activity-log {
+        max-height: 200px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .profile-info h2 {
+        font-size: 1.25rem;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+    }
+
+    /* Table responsive styles */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+
+    td::before {
+        content: attr(data-label) ": ";
+        font-weight: bold;
+        color: #007bff;
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        margin: 0.25rem;
+        border-radius: 8px;
+    }
+
+    .stat-box {
+        height: 5rem;
+        border-radius: 15px;
+        padding: 0.5rem 0;
+    }
+
+    .stat-box h2 {
+        font-size: 1.1rem;
+        margin: 0.2rem 0;
+    }
+
+    .todays-attendance-container {
+        padding: 1rem 0.25rem;
+        gap: 1rem;
+    }
+
+    .mark-attendance-btn,
+    .disabled-attendance-btn {
+        height: 2rem;
+        font-size: 0.8rem;
+        border-radius: 8px;
+    }
+
+    .activity-log {
+        padding: 0.75rem 0.5rem;
+        margin: 0.5rem 0.25rem;
+    }
+
+    .profile-container {
+        margin: 0.5rem 0.25rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0.75rem;
+    }
+}
